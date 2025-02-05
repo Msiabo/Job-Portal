@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+*{
+  font-family: Archivo;
+}
+@layer base{
+  html {
+    scroll-behavior: smooth;
+  }
+}
+  ::-webkit-scrollbar {
+    width: 8px;
+    margin-right: 2px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-right: 2px;
+  }
+
+.recruiterLoginButton{
+  width: 150px;
+  height: 40px;
+  background: white;
+  border: 2px solid #05487f;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.loginButton{
+  width: 150px;
+  height: 40px;
+  background: #05487f;
+  border-radius: 10px;
+  text-decoration-color: white;
+  color: white;
+  cursor: pointer;
+}
+.recruiterLoginButton:hover {
+  transform: scale(1.1);
+  background: #05487f;
+  text-decoration-color: white;
+  color: white;
+}
+.loginButton:hover {
+  transform: scale(1.1);
+  background: white;
+  text-decoration-color: #05487f;
+  color: #05487f;
+  border: 2px solid #05487f;
+  
+}
+.myimg{
+  width: 20px;
+  height: 20px;
+}
+.logoheader{
+  display: flex;
+  margin: 3px;
+  align-items: center;
+}
+.logoheader p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #05487f;
+  
+  font-size: 25px;
+}
+/** Hero **/
+.myhero h1{
+  font-size: 60px;
+  
+}
+.btn{
+  border-radius: 10px;
+}
+.applyButton{
+  width: 100px;
+  height: 30px;
+  background: white;
+  border: 2px solid #05487f;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.learnButton{
+  width: 100px;
+  height: 30px;
+  background: #05487f;
+  border-radius: 10px;
+  text-decoration-color: white;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+.applyButton:hover {
+  transform: scale(1.1);
+  background: #05487f;
+  text-decoration-color: white;
+  color: white;
+}
+.learnButton:hover {
+  transform: scale(1.1);
+  background: white;
+  text-decoration-color: #05487f;
+  color: #05487f;
+  border: 2px solid #05487f;
+  
+}
+.social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #47b2e4;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #209dd8;
+  color: #fff;
+  text-decoration: none;
+}
+.rich-text{
+  font-size: 15px;
+  color:#7A7B7D
+}
+.rich-text p{
+  margin-bottom: 15px;
+}
+.rich-text h1{
+  font-size: 36px;
+  font-weight: 800;
+  color: 252525;
+  margin: 10px;
+}
+.rich-text h2{
+  font-size: 22px;
+  font-weight: 700;
+  color: #252525;
+  margin: 10px;
+}
+.rich-text h3{
+  font-size: 18px;
+  font-weight: 600;
+  color: #252525;
+  margin: 10px;
+}
+.rich-text h4{
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin: 10px;
+}
+.rich-text h5{
+  font-size: 14px;
+  font-weight: 400;
+  color: #555555;
+  margin: 10px;
+}
+.rich-text h5{
+  font-size: 12px;
+  font-weight: 400;
+  color: #666666;
+  margin: 10px;
+}
+.rich-text strong{
+  font-weight: 700;
+}
+.rich-text ol{
+  margin-left: 30px;
+  list-style-type: decimal;
+}
+.rich-text ul{
+  margin-left: 30px;
+  list-style: disc;
+}
+.rich-text li{
+  margin-bottom: 8px;
+}
+.similar-jobs-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+
+
+
+
