@@ -1,9 +1,9 @@
 // Import with `import * as Sentry from "@sentry/node"` if you are using ESM
-import * as Sentry from "@sentry/node";
+import * as Sentry from "@sentry/node"
 import { nodeProfilingIntegration } from "@sentry/profiling-node";
 
 Sentry.init({
-  dsn: "https://9c3d02114f511edb8792aaf8d4fea4c0@o4508754778259456.ingest.us.sentry.io/4508754786189312",
+  dsn: "https://e8d7133863a73214a71af44e59c51019@o4508754778259456.ingest.us.sentry.io/4508779236818944",
   integrations: [
     nodeProfilingIntegration(),
     Sentry.mongooseIntegration(),

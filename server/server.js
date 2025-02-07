@@ -1,36 +1,35 @@
-import express from "express";
-import cors from "cors";
-import "dotenv/config";
-import connectToDb from "./config/db.js";
-import * as Sentry from "@sentry/node";  // ✅ Import Sentry properly
-import { clerkWebhooks } from "./controllers/webhooks.js";
-  // ✅ Ensure tracing is included
+//Imports 
+import './config/instrument.js'
+import express from 'express'
+import cors from 'cors'
+import 'dotenv/config'
+import connectDB from './config/db.js'
+import * as Sentry from "@sentry/node";
+import { clerkWebhooks } from './controllers/webhooks.js'
 
-// ✅ Initialize Express first
-const app = express();
+//Initialise expresss
+const app = express()
 
+//Connect database
+await connectDB()
 
+//Middlewares
+app.use(cors())
+app.use(express.json())
 
-// ✅ Connect to MongoDB (before middlewares)
-await connectToDb();
+//Routes
+app.get('/',(req,res) => res.send("API Working"))
+app.get("/debug-sentry", function mainHandler(req, res) {
+    throw new Error("My first Sentry error!");
+  });
+  app.post('/webhooks' ,clerkWebhooks)
 
-// ✅ Middlewares
-app.use(cors());
-app.use(express.json());
+//PORT
+const PORT = process.env.PORT || 5000
 
-// ✅ Routes
-app.get("/", (req, res) => res.send("API Working"));
-
-app.post('/Webhooks' , clerkWebhooks)
-
-app.get("/debug-sentry" , function mainHandler(req, res){
-    throw new Error("First sentry error!!");
-} );
-
+//Sentry Error Handler
 Sentry.setupExpressErrorHandler(app);
 
-// ✅ Start Server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on PORT ${PORT}`);
-});
+app.listen(PORT,() => {
+    console.log(`Server is running on PORT : ${PORT}`);
+})

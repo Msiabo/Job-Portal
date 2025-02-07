@@ -1,17 +1,15 @@
 import mongoose from "mongoose";
 
-const connectToDb = async () => {
-    try {
-        await mongoose.connect(process.env.MONGO_URI, {
-           
-            tls: true,   // ✅ Use TLS (default for MongoDB Atlas)
-        });
+// Function to connect to db
+const connectDB = async () => {
+    try{
+        mongoose.connection.on(('connected'), ()=> console.log('Database Connected Successfully'))
 
-        console.log("✅ Database Connected Successfully!");
-    } catch (error) {
-        console.error("❌ Database Connection Error:", error);
-        process.exit(1);
+        await mongoose.connect(`${process.env.MONGO_URI}/career-link`)
     }
-};
-
-export default connectToDb;
+    catch{
+        console.log('Database Connection Failed')
+    }
+    
+}
+export default connectDB
