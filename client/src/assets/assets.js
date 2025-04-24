@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import careerLink from "./careerlink.png"
-import jobify from "./jobify.png"
+import jobify from "./Jobify.png"
 import search_icon from "./search_icon.svg";
 import fnb from './fnb_logo.jpg'
 import company_icon from "./company_icon.svg";
